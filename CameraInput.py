@@ -56,6 +56,7 @@ class Camerainput:
                 print("Ignoring empty camera frame.")
                 # If loading a video, use 'break' instead of 'continue'.
                 return None, False
+            return image,True
             
         elif mode == 1:
             frames = self.align.process(self.pipeline.wait_for_frames())
